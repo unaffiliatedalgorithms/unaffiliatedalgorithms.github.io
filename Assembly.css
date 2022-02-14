@@ -1,0 +1,235 @@
+:root{
+	--controltext: 1.5em;
+	--controlbgcolor:#000000;
+	--controlcolor:#FFFFFF;
+	--inputbgcolor:#FFFFFF;
+	--inputcolor:#000000;
+	--buttonbgcolor:#AAAAAA;
+	--buttoncolor:#000000;
+	--addresscolor:#00FFFF;
+	--commandcolor:#FFFF00;
+	--instructioncolor:#FF0000;
+	--stackpointercolor:#0000FF;
+	
+	--frac: 45;
+	--hardfrac: calc(var(--frac) * 1%);
+	--codefrac: calc(100% - var(--hardfrac));
+	--byte: calc(var(--frac) * 1vw /16 - 1px);
+	--bytefont: calc(var(--byte) / 2);
+	--textsize:1.5rem;
+	--boxheight:calc(var(--textsize) * 1.5);
+	--headfont:2rem;
+	--headsize:calc(var(--headfont) * 2);
+}
+
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	padding: 0;
+    margin: 0;
+	min-height: 100%;
+	height:100%;
+	text-align: center;
+	background-color: var(--controlbgcolor);
+	color:var(--controlcolor);
+}
+
+h1{
+	padding: 0;
+    margin: 0;
+	font-size: var(--headfont);
+	height: var(--headsize);
+}
+
+div.ui{
+	padding: 0;
+    margin: 0;
+	background-color: #FF0000;
+	width: 100%;
+	height: calc(99% - var(--headsize));
+}
+
+div.control{
+	font-size:var(--textsize);
+	padding: 0;
+    margin: 0;
+	background-color: #00FF00;
+	height: var(--boxheight);
+	display: flex;
+}
+
+div.error{
+	padding: 0;
+    margin: 0;
+	background-color: #FF0000;
+	width: 100%;
+	height: var(--boxheight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.hz{
+	padding: 0;
+    margin: 0;
+	height: var(--boxheight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.errmsg{
+	font-size:var(--textsize);
+	padding: 0;
+    margin: 0;
+	color: #FFFF00;
+}
+
+div.system{
+	padding: 0;
+    margin: 0;
+	background-color: #0000FF;
+	width: 100%;
+	height: 100%;
+	float:left;
+}
+
+div.code{
+	padding: 0;
+    margin: 0;
+	width: var(--codefrac);
+	height: 100%;
+	float:left;
+	background-color: #00FF00;
+}
+
+textarea.code{
+	width:100%;
+	height:calc(100% - calc(var(--boxheight) * 2));
+	font-size:var(--textsize);
+	padding: 0;
+    margin: 0;
+}
+
+div.hardware{
+	padding: 0;
+    margin: 0;
+	width: var(--hardfrac);
+	height: 100%;
+	font-size: calc(var(--bytefont) * 2);
+	float:left;
+	background-color: var(--controlbgcolor);
+	color:var(--controlcolor);
+	border:0px;
+}
+
+
+div.print{
+	float:left;
+	padding: 0;
+    margin: 0;
+	background-color: #FF0000;
+}
+
+div.cpu{
+	float:left;
+	padding: 0;
+    margin: 0;
+	background-color: #00FF00;
+}
+
+div.labels{
+	width: 100%;
+	padding: 0;
+    margin: 0;
+	background-color: #0000FF;
+}
+
+.byte{
+	font-size: var(--bytefont);
+	font-family: monospace, monospace;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+	background-color: var(--inputbgcolor);
+	color: var(--inputcolor);
+}
+
+.address{
+	background-color: var(--addresscolor);
+}
+
+.command{
+	background-color: var(--commandcolor);
+}
+
+.instruction{
+	background-color: var(--instructioncolor);
+}
+
+.stackpointer{
+	background-color: var(--stackpointercolor);
+}
+
+.title{
+	font-size: calc(var(--bytefont) * 1.5);
+	font-family: monospace, monospace;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+	background-color: var(--inputbgcolor);
+	color: var(--inputcolor);
+}
+
+table{
+	float: left;
+	width:100%;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+	table-layout: fixed;
+	
+}
+
+tr{
+	float: left;
+	width:100%;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+}
+
+td{
+	float: left;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+	background-color:#000000;
+}
+
+input.dimensions{
+	width: 100%;
+	padding: 0;
+    margin: 0;
+	border-width: 0;
+	background-color: var(--inputbgcolor);
+	color: var(--inputcolor);
+	text-align: center;
+	font-size: 1em;
+}
+
+button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+    margin: 0;
+	border-width: 0.1em;
+	background-color: var(--buttonbgcolor);
+	color: var(--buttoncolor);
+	font-size: var(--textsize);
+}

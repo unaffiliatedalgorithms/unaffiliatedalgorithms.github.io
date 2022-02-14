@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<!-- Check the javascript file for explanations, copyright and so on-->
+	<head>
+		<title>Assembly Emulator</title>
+		<link rel="stylesheet" href="Assembly.css">
+		<script type="text/javascript" src="Control.js"></script>
+		<script type="text/javascript" src="Assembly.js"></script>
+	</head>
+	<body>
+
+		<h1>Assembly Emulator (8-bit)</h1>
+		<div class="ui" id="ui">
+			<div class="system">
+				<div class="code">
+					<div class="control">
+						<button type="button" class="dimensions" id="assemble">
+							Assemble
+						</button>
+						<button type="button" class="dimensions" id="step">
+							Step
+						</button>
+						<button type="button" class="dimensions" id="run">
+							Run
+						</button>
+						<div class="hz">
+							Speed:
+							<input type="number" class="dimensions" id="speed">
+							Hz
+						</div>
+					</div>
+					<div class="error">
+						<div class="errmsg" id="error">
+						</div>
+					</div>
+					<textarea id="code" class="code">
+						Dummy Text
+					</textarea>
+				</div>
+				<div class="hardware">
+					<div class="print">
+						Output
+						<table id="print">
+						</table>
+					</div>
+					<div class="cpu" id="cpu">
+						CPU &amp; Memory
+						<div class="title" id="registers">
+							Registers/Flags
+						</div>
+						<table id="register">
+						</table>
+						<p class="title">&nbsp;</p>
+						<div class="title" id="registers">
+							RAM
+						</div>
+						<table id="ram">
+						</table>
+					</div>
+					<div class="labels" id="labeltable">
+						Labels
+					</div>
+				</div>
+			</div>
+			<script>initiate();</script>
+	</body>
+</html>
